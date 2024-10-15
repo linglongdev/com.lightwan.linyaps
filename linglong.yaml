@@ -1,0 +1,77 @@
+version: "1.0"
+package:
+  id: com.lightwan.linyaps
+  name: LightWAN
+  version: 5.7.62.0
+  kind: app
+  description: LightWAN is an Enterprise-Grade SD-WAN solution powered by SDN and
+    WAN optimization technologies which can deliver a more stable, flexible,
+    secure and faster Enterprise WAN service in a cost-effective way
+command:
+  - /opt/apps/com.lightwan.linyaps/files/bin/start.sh
+base: org.deepin.foundation/20.0.0
+sources:
+  - kind: file
+    url: https://pro-store-packages.uniontech.com/appstore/pool/appstore/c/com.lightwan/com.lightwan_5.7.62.0_amd64.deb
+    digest: 85f3d00cf53cab066c08177e36790fd2e05b3663711e62b1695706766e11b1a4
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/iptables/iptables_1.8.2.1-1+dde_amd64.deb
+    digest: 4cc33790298453d9d7f147ebc10d4512958ad77d3248e921303b1a42445648dd
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/iptables/libip6tc0_1.8.2.1-1+dde_amd64.deb
+    digest: 4b1d933fef5a92de111b1760c20d2d81d46770325c4fd082f7bc0ac70c60d81f
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/iptables/libiptc0_1.8.2.1-1+dde_amd64.deb
+    digest: 0401dbfbc7734340119b6eeadaf7ed7a66bf40535cb40e0371df13a5954e5d32
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/iptables/libxtables12_1.8.2.1-1+dde_amd64.deb
+    digest: 14d0540504c720f9ab5a1fb3ca2d26b554ee97719265e84cf0a340fd7e460bea
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/libm/libmnl/libmnl0_1.0.4-2+apricot_amd64.deb
+    digest: 593a3da6a851e62cf7c03d166a74b59bcb6eee4961c7716a81d8dc35604fa486
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/libn/libnetfilter-conntrack/libnetfilter-conntrack3_1.0.7-1_amd64.deb
+    digest: 6b98d9204949af9d4df43cab732c9104f4d6735288e6f39267479e3b46663df3
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/libn/libnfnetlink/libnfnetlink0_1.0.1.1-2+rebuild_amd64.deb
+    digest: 71b26131ac9cfb0ab89f2a3b1dcd92f1e3b3e30cb1b497a19dacea58051d6840
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/libn/libnftnl/libnftnl11_1.1.2-2_amd64.deb
+    digest: a938b2887b537403f0289dc1f6d14bfa212ab4a2ec3b8a262d49a326c373724c
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/ipset/ipset_6.38-1.2_amd64.deb
+    digest: 2e2d1c3d494fe32755324bf040ffcb614cf180327736c22168b4ddf51d462522
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/ipset/libipset11_6.38-1.2_amd64.deb
+    digest: 3777c4c68f8006ef0b0b5b432042e1fde24883f3f4c56b43fd13b2e53f7d1109
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/b/brotli/libbrotli1_1.0.7.1-1+eagle_amd64.deb
+    digest: d0164ef22361cbaf7421adab98ecc52dd0013dc656efcd1993afe4262c13c330
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/icu/libicu70_70.1-2_amd64.deb
+    digest: 413244f007c488d0c54c952239e2511118cbabb52821d3150fa4d3325595b551
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/u/util-linux/util-linux-extra_2.38.1-1.1_amd64.deb
+    digest: 489bc82e8e2d2d00cc216a38240b738958871e94d5cc4a1b7724095adb9e9560
+  - kind: file
+    url: https://pro-store-packages.uniontech.com/appstore/pool/appstore/u/uniontech.ca.certificates.chain/ca-certificates-uniontech_1.0.4-1_all.deb
+    digest: 981c39833e80ffd4c15fe75155e07e02b4f31d2db881e6e710bfa435391b6c3d
+build: >-
+  export LINGLONG_RAW_ID="com.lightwan"
+
+  export LINGLONG_APP_ID="com.lightwan.linyaps"
+
+  export LINGLONG_APP_NAME="LightWAN"
+
+  export LINGLONG_APP_VERSION="5.7.62.0"
+
+  export LINGLONG_APP_KIND="app"
+
+  export LINGLONG_APP_DESC="LightWAN is an Enterprise-Grade SD-WAN solution
+  powered by SDN and WAN optimization technologies which can deliver a more
+  stable, flexible, secure and faster Enterprise WAN service in a cost-effective
+  way"
+
+  export LINGLONG_COMMAND="/opt/apps/com.lightwan.linyaps/files/bin/start.sh"
+
+  exec /project/build.sh
