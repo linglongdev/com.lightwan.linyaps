@@ -1,0 +1,15 @@
+com.lightwan
+iptables
+libip6tc0
+libiptc0
+libxtables12
+libmnl0
+libnetfilter-conntrack3
+libnfnetlink0
+libnftnl11
+ipset
+libipset11
+libbrotli1
+libicu70
+util-linux-extra
+ca-certificates-uniontech
